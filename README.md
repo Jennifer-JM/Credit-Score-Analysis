@@ -47,7 +47,8 @@ Some customer’s occupation info varies with it having typos or NaN. The data w
 Some customer’s data had various typos with underscores, or symbols, and negative numbers. Number of loans can only be greater than 0 and an int. The data was cleaned by using the cumstomer_id mapping and removing discrepancies through a function and using lambda to assure positive numbers were greater than 0. (edited) 
 
 # Occupation Credit Scores Over Time
-## Overview
+
+Overview
 This project visualizes the credit scores of various occupations across a year, focusing on month-to-month variations. Each occupation is categorized into one of three credit score levels:
 - **Good (Green)**
 - **Standard (Blue)**
