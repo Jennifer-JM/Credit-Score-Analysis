@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Classification</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Smooth hover effect for sections */
+        .section {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Customizing the footer */
+        footer p {
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #d1d5db;
+            transition: color 0.2s;
+        }
+
+        footer .social-icons a:hover {
+            color: #ffffff;
+        }
+
+        /* Enhanced button style */
+        .button {
+            background-color: #1d4ed8;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+
+        /* Custom styles for the navigation and search bar */
+        #search-navbar {
+            flex-grow: 1;
+            margin-right: 1rem;
+        }
+
+        .nav-links {
+            margin-left: auto;
+        }
+
+        /* Make the search bar wider and more prominent */
+        #search-navbar input {
+            width: 300px;
+            padding: 0.5rem 1rem;
+            border: 2px solid #1d4ed8;
+            border-radius: 9999px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #search-navbar input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 10px rgba(29, 78, 216, 0.2);
+        }
+
+        /* Adjust the padding for the header */
+        header {
+            padding: 2rem 1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-blue-700 p-8 text-white text-center">
+        <h1 class="text-5xl font-extrabold tracking-wide">Credit Score Classification</h1>
+        <p class="text-xl mt-2 font-light">University of Toronto Bootcamp, Data Analytics Project 3</p>
+    </header>
+
+    <!-- Search Bar and Navigation Section -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-screen-xl mx-auto p-4 flex items-center">
+            <div id="search-navbar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <ul class="nav-links flex space-x-8 font-medium">
+                <li><a href="#" onclick="openNewPage('Home')" class="text-gray-700 hover:text-blue-700">Home</a></li>
+                <li><a href="#" onclick="openNewPage('Presentation')" class="text-gray-700 hover:text-blue-700">Presentation</a></li>
+                <li><a href="#" onclick="openNewPage('About Us')" class="text-gray-700 hover:text-blue-700">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-12">
+        <!-- Introduction Section -->
+        <section class="section bg-white rounded-lg shadow-lg p-12 mb-12">
+            <h2 class="section-title text-center">Introduction</h2>
+            <p class="section-text text-center">
+                Welcome to our project on Credit Score Classification, where we explore various aspects influencing credit scores and their distribution across different demographics.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-800 p-8 text-center">
+        <p>&copy; 2024 Credit Score Classification Project. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript to Toggle Menu and Highlight Active Page -->
+    <script>
+        function openNewPage(pageName) {
+            var newWindow = window.open("", "_blank", "width=600,height=400");
+
+            if (pageName === 'Home') {
+                newWindow.document.write("<h1>HOME PAGE!</h1>");
+                newWindow.document.write("<p>This is the content of the home page.</p>");
+            } else if (pageName === 'Presentation') {
+                newWindow.document.write("<h1>Introduction</h1>");
+                newWindow.document.write("<li>Analyse quarterly reports to create a report for critical change management</li>");
+                newWindow.document.write("<li>How is the distribution of credit scores across different age groups?</li>");
+                newWindow.document.write("<li>How do the number of bank accounts and credit cards affect credit score?</li>");
+                newWindow.document.write("<li>What is a credit score by Occupation?</li>");
+                newWindow.document.write("<li>How the Payment Behaviour affect the Credit Score?</li>");
+                newWindow.document.write("<h1>Jennifer's Analysis</h1>");
+                newWindow.document.write("<h3>Data Cleaning Strategy</h3>");
+                newWindow.document.write("<p>By extracting the data from Kaggle, the Credit Score Classification dataset, that contains two csvs’ having 150,000 rows of data, the csvs’ were concatenated into one to create a unified dataset which results in an enhanced analysis.</p>");
+                newWindow.document.write("<p>There are over 11k unique records of customers.</li>");
+                newWindow.document.write("<p>Ensuring the majority of customer credit score data was not deleted, was prioritised.Some challenges faced were, where there were multiple NaN values in the columns, info was filled in based on their customer_id mapping. Customer_id mapping is based on previous records of a customer_id. This assured that the dataset is accurate.</p>");
+                newWindow.document.write("<h5>Occupation column</h5>")
+                newWindow.document.write("<p>Some customer's occupation info varies with it having typos or NaN. The data was cleaned by using the most common occupation of the customer, as their occupation info.</p>");
+                newWindow.document.write("<h5>Num of loans</h5>");
+                newWindow.document.write("<p>Some customer's data had various typos with underscores, or symbols, and negative numbers. Number of loans can only be greater than 0 and an int. The data was cleaned by using the cumstomer_id mapping and removing discrepancies through a function, and using lambda to assure positive numbers were greater than 0.</p>");
+                newWindow.document.write("<h3>Quarterly Report</h3>");
+                newWindow.document.write("<h4>Outstanding Debt Analysis</h4>");
+                newWindow.document.write('<img src="q1_outstanding_debt.png" alt="Presentation Image" width="400"/img>');
+                newWindow.document.write('<img src="q2_outstanding_debt.png" alt="Presentation Image" width="400"/img>');
+                newWindow.document.write('<img src="q3_outstanding_debt.png" alt="Presentation Image" width="400"/img>');
+                newWindow.document.write("<h4>Q1 to Q3 Report Analysis</h4>");
+                newWindow.document.write('<img src="q1_analysis.png" alt="Presentation Image" width="400"/img>');
+                newWindow.document.write('<img src="q2_analysis.png" alt="Presentation Image" width="400"/img>');
+                newWindow.document.write('<img src="q3_analysis.png" alt="Presentation Image" width="400"/img>');
+                newWindow.document.write("<h4>Critical Change Management</h4>");
+                newWindow.document.write("<li>Increase clientele</li>");
+                newWindow.document.write("<li> More effective credit inquiries that will result in more customers paying minimum amount of loans</li>");
+                newWindow.document.write("<h1>Khlood's Analysis</h1>");
+                newWindow.document.write("<h3>Query 1: Distribution of Credit Scores Across Different Age Groups</h3>");
+                newWindow.document.write("<h4>1. Age Group 18-25:</h4>");
+                newWindow.document.write("<li>Good Credit Score: 1,556</li>");
+                newWindow.document.write("<li>Poor Credit Score: 3,564</li>");
+                newWindow.document.write("<li>Standard Credit Score: 5,583</li>");
+                newWindow.document.write("<h4>1. Age Group 26-35:</h4>");
+                newWindow.document.write("<li>Good Credit Score: 2,081</li>");
+                newWindow.document.write("<li>Poor Credit Score: 4,716</li>");
+                newWindow.document.write("<li>Standard Credit Score: 7,380</li>");
+                newWindow.document.write("<h4>1. Age Group 36-45: </h4>");
+                newWindow.document.write("<li>Good Credit Score: 2,051</li>");
+                newWindow.document.write("<li>Poor Credit Score: 4,576</li>");
+                newWindow.document.write("<li>Standard Credit Score: 7,464</li>");
+                newWindow.document.write("<h4>1. Age Group 46-55:</h4>");
+                newWindow.document.write("<li>Good Credit Score: 1,932</li>");
+                newWindow.document.write("<li>Poor Credit Score: 1,044</li>");
+                newWindow.document.write("<li>Standard Credit Score: 3,565</li>");
+                newWindow.document.write("<h4>1.Age Group 56-65:</h4>");
+                newWindow.document.write("<li>Good Credit Score: 175</li>");
+                newWindow.document.write("<li>Poor Credit Score: 50</li>");
+                newWindow.document.write("<li>Standard Credit Score: 331</li>");
+                newWindow.document.write("<h4>1.Age Group 66-75:</h4>");
+                newWindow.document.write("<li>Good Credit Score: 286</li>");
+                newWindow.document.write("<li>Poor Credit Score: 1,670</li>");
+                newWindow.document.write("<li>Standard Credit Score: 2,088</li>");
+                newWindow.document.write("<h3>Query 2: Effect of the Number of Bank Accounts and Loans on Credit Score</h3>");
+                newWindow.document.write("<h4>1.Good Credit Score:</h4>");
+                newWindow.document.write("<li>Average Bank Accounts: 15.29</li>");
+                newWindow.document.write("<li>Average Loans: 1.94</li>");
+                newWindow.document.write("<h4>2.Poor Credit Score:</h4>");
+                newWindow.document.write("<li>Average Bank Accounts: 17.56</li>");
+                newWindow.document.write("<li>Average Loans: 4.10</li>");
+                newWindow.document.write("<h4>3.Standard Credit Score:</h4>");
+                newWindow.document.write("<li>Average Bank Accounts: 17.27</li>");
+                newWindow.document.write("<li>Average Loans: 3.15</li>");
+                newWindow.document.write("<h3>Overall Insights:</h3>");
+                newWindow.document.write("<li>Age and Credit Score: The results suggest that as people age, they tend to improve their credit scores, with a shift toward more Good credit scores in middle age (46-55). However, financial strain can increase again in later years (66-75), likely due to retirement and reduced income</li>");
+                newWindow.document.write("<li>Bank Accounts, Loans, and Credit Score: Having more bank accounts is common across all credit score categories, but those with fewer loans tend to have better credit scores. Managing loans responsibly appears to be a key factor in maintaining a Good credit score, while individuals with Poor credit scores tend to struggle with multiple loans</li>");
+                newWindow.document.write('<img src="ETL.png" alt="Presentation Image" width="600"/img>');
+                newWindow.document.write("<h1>Sukhwander's Analysis</h1>");
+                newWindow.document.write("<p>We format our data set by creating certain new columns such as we create new columns for different types of loans as we got a single column with different types of loans in available data set</p>");
+                newWindow.document.write("<p>In the original data set we have a column of credit history age with info in form of years and months. We convert It to new column named credit history age month with a numeric value of months so that it can use further for analysis of data.</p>");
+                newWindow.document.write('<img src="Screenshot 2024-10-21 at 4.16.42 PM.png" alt="Presentation Image" width="600"/img>');
+                newWindow.document.write("<p>I tried to address two questions from this data set. The first thing is to check the relation of occupation with credit score. We have 15 different occupation fields in our data set with lawyers has the most poor credit score record.</p>");
+                newWindow.document.write('<img src="Occupation relation with credit score.png" alt="Presentation Image" width="600"/img>');
+                newWindow.document.write("<p>From this data, we analyze that occupations such as Architect, Engineers, Entrepreneurs, Mechanics, Scientists and writers are more tilt towards poor credit score. Second question is to check the effect of payment behaviour on credit score. Payment behaviour tells us how customers utilize their credit and how are their spending habits. From this data we get an output that</p>");
+                newWindow.document.write('<img src="Payment Behaviour relation with credit score.png" alt="Presentation Image" width="600"/img>');
+                newWindow.document.write("<p>This graph shows us that high spent medium value payments behaviour is more prone to poor credit score,</p>");
+                newWindow.document.write("<h1>Deniza's Analysis</h1>");
+                newWindow.document.write('<img src="occupation_credit_scores copy_goodcopy.png" alt="Presentation Image" width="600"/img>');
+                newWindow.document.write("<h4>1.Good Credit Classifications:</h4>");
+                newWindow.document.write("<li>Good-(Green), Standard-(Blue), Poor-(Red)</li>");
+                newWindow.document.write("<h4>2.Key Observations:</h4>");
+                newWindow.document.write("<li>Poor Scores: Teachers, Media Managers, and Lawyers struggle during certain months (e.g., February, June)</li>");
+                newWindow.document.write("<li>Standard Scores: Engineers and Mechanics show more stability in months like July</li>");
+                newWindow.document.write("<li>Good Scores: Accountants, Doctors, and Architects maintain good scores, especially in May, November, and October</li>");
+                newWindow.document.write("<h4>3.Trends:</h4>");
+                newWindow.document.write("<li>High-paying and finance-related jobs have better credit scores</li>");
+                newWindow.document.write("<li>Some professions face seasonal or financial stress at specific times of the year</li>");
+                
+
+
+
+
+
+
+
+
+            } else if (pageName === 'About Us') {
+                newWindow.document.write("<h1>About Us</h1>");
+                newWindow.document.write("<p>This page contains information about us</p>");
+            }
+
+            newWindow.document.title = pageName + " Page";
+        }
+    </script>
+
+</body>
+
+</html>
+
