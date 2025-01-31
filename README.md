@@ -26,7 +26,7 @@ The cleaned dataset can be found in Resources, cleaned_data.csv.
   * The original dataset contained credit history age in years and months.
   * A new column, `<span>credit_history_age_months</span>`, was created to convert this information into numerical months for easier analysis.
 
-
+### Financial Analysis and Critical Change Management
 
 The financial analysis of quarterly reports was conducted in Project 3 - quarterly_reports_analysis.ipynb, to generate insights that drive effective critical change management.
 
