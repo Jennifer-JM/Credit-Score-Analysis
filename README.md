@@ -6,9 +6,8 @@
 
 ###### By: Jennifer Mancheno
 
-The dataset, sourced from Kaggle’s Credit Score Classification dataset, originally contained two CSV files with 150,000 rows of data. These were merged to create a unified dataset, resulting in enhanced analysis. Over 11,000 unique customer records were identified, and efforts were made to retain as much credit score data as possible.
-
-Financial analysis of quarterly reports is conducted to generate insights that drive effective critical change management
+The dataset, sourced from Kaggle’s Credit Score Classification dataset, originally contained two CSV files with 150,000 rows of data. These were merged to create a concatinated dataset, resulting in enhanced analysis. Over 11,000 unique customer records were identified, and efforts were made to retain as much credit score data as possible.
+The cleaned dataset can be found in Resources, cleaned_data.csv. 
 
 ### Key Cleaning Steps:
 
@@ -27,7 +26,11 @@ Financial analysis of quarterly reports is conducted to generate insights that d
   * The original dataset contained credit history age in years and months.
   * A new column, `<span>credit_history_age_months</span>`, was created to convert this information into numerical months for easier analysis.
 
-  ---
+
+
+The financial analysis of quarterly reports was conducted in Project 3 - quarterly_reports_analysis.ipynb, to generate insights that drive effective critical change management.
+
+---
 
 ## Age Group Analysis
 
